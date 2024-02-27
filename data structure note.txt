@@ -1,0 +1,917 @@
+data structure note
+==============================
+
+
+what is a data structure  ? 
+-------------------------------
+
+data structure is the way of storing and organizing data . so that it can be used efficiently
+
+built in ds in js
+-------------------
+# arrays , objects , sets , maps ;
+
+custom ds in js 
+-------------------
+# stacks , queues , circular queues , linked list , hash tables , trees , graphs
+
+
+
+what is an algorithms ?
+-------------------------
+
+an algorithm is a set of well-defined instructions to solve a particular problems.
+
+
+time coplexity  : the amnt of time to taken by an alogirithm to run
+space complezxity : the amnt of space to taken by an algoithm to run
+
+mathematical tools to represent time and space complexity 
+---------------------------------------------------------------
+
+# big-O  notation - worst case !
+
+# omega notation - best case 
+
+# theta notaion - avrg case
+
+
+
+
+array  in js 
+-----------------
+
+- an array is a data structre that can hold a collection of values
+- array contains , number , string , object, booleans;
+- array is resisazale, dont need to specify the size ;
+
+basic array methods
+--------------------------
+
+= to add an element at the end  :  array.push();
+= to add an element at the begining : array.unShift();
+= to remove an elemnet at the end : array.pop();
+= to remove an elment at the begining : array.shif();
+
+
+time compleixity  for array
+-----------------------------
+
+- insert /  remove from end  == O(1) constant
+- insert / remove from begning ==v O(n) linear
+{ becase ,the index has to rerrange . for every iteration}
+
+# push / pop  - constant 
+# shift / unshift / concat / slice / splice - linear 
+# foreach / map / filter /  reduce - linear 
+
+
+
+object in js 
+------------------------------------------
+
+- an object is an unordered collection of key value- pairs . the key must be string,symbol . value can be any data type.
+
+- an object is not an iterable 
+
+- to get a value . we can use by using its key.
+
+= to delete a key  :  delete.object.keyNAME
+
+Object.keys(obj) – returns an array of keys. - constant
+Object.values(obj) – returns an array of values. - constant
+Object.entries(obj) – returns an array of [key, value] pairs. - constant
+
+
+time complexity
+------------------------
+
+insert  - constant
+
+remove - constant
+
+access - constant
+
+search  - linear
+
+
+set in js
+---------------------------
+
+a set in js is the a set of ds that can hold a collection  of values that are must be unique.
+
+- set can contain different data types , strings ,booleans , number , objects all in the same set
+
+
+- no need to declare the size before creating it .  size is dynamic
+
+- iterable 
+
+
+set vs array
+
+======================
+
+- arrays contain duplicate values. sets cannot;
+
+- insertion order is maintained in arrays . not in sets
+
+- searching and deleteing is faster in sets . not in arrays
+
+
+
+= to add a value in the sets we can use   :  set.add(value) ; 
+
+= to delete a value in the sets use  :  set.delete(value)
+
+= to check if a value exist : set.has(value);
+
+= to get the size of the sets  : set.size();
+
+= to delete all values in the sets = set.clear();
+
+
+
+
+maps in javascript 
+------------------------------
+
+
+a map is an orderd collection of key value pairs . both keys and values can any data type.
+
+- is iterable
+
+- can get a value using key ,like objects;
+
+
+
+object vs map
+
+====================
+
+- objects are unordered . map is ordered
+
+- keys can be any type in map . not in objects
+
+- objects are not iterable . maps are
+
+- object can attach functionality . map can only store data ; 
+
+ 
+
+= to add a key value in map  = map.set('key',value);
+
+= to check a value exist = map.has();
+
+= to delete a value  = map.delete;
+
+= to clear all values = map.clear();
+
+= to get the size of map = map.size();
+
+
+
+
+
+stack
+==============================
+
+
+the stack data structures is a sequential collection of elements that follows the principle of last in first out (LIFO)
+
+
+a stack is used to manage function calls , keep track of variables and handle other order of operations . when a fucntion is called it added to the top of the stack and when it finishes it removes from the top of the stack . this ensure the most recently called will work first .
+
+
+stack support two main operations
+-------------------------------
+
+- push 
+----------
+add at the top
+
+- pop
+------------
+
+remove from the top
+
+
+usage of stack
+-------------------
+- browser history trackng
+
+- call stack in js
+
+- undo when typing
+
+- pressing back button on the browser 
+
+
+
+queue
+==============================
+
+the queue data structure collection of sequential of elements that follows 
+the principle of first in first out (FIFO).
+
+
+the first element is the first one to remove
+
+eg : 
+
+people standing in a queue
+
+
+
+queue data strucurue has two main operations
+-----------------------------------------------
+
+-Enqueue , which adds  an element to front of collection
+
+- dequeue , which removes from the first of collection
+
+---------------------------------------------------------
+
+- peeek() - get the value of the elemet at the front without removing it
+- isEmpty() - check if the queue is empty
+- size() - get the number of elements in the queue
+- print() - visualize the elements in the queue
+
+
+queue usage
+------------
+
+- printers
+
+- cpu task sheduling
+
+- callback queue in js runtime
+
+
+
+
+circular queue
+========================
+
+the size of the ques is fixed and a single block of memory is uses as is the first element is connected to the last element
+
+
+circular queue usage
+------------------
+
+- traffic lights
+- clock
+
+
+- enqueue - add an element in the queue
+
+- dequeue  - remove the oldest elemnet in the queue
+
+- isFull - check if the queue is full
+
+- isEmpty - check the queue is empty
+
+- peek - get the value on the front without removing it on the queue
+
+- size - get the number of elements in the queue
+
+- print - visualize the elements in the queue
+
+
+
+
+linked list 
+===========================
+
+a linked list is a linear data structure that includes a series of connected nodes . each nodes cositst of a data value and pointer that points to the next node 
+
+- the list elements can be easiil inserted or removed without allocation or reorganiztionn of the entire structure.
+
+- random access of elements is not easy and accessing an element has linear time complexity
+
+- the head pointer always point at the first node
+
+ linked list support three main operations 
+---------------------------------------------
+ insertion - to add an elment at the beginig or end or at a given index 
+
+- prepent = o(1)
+- append = o(n)
+ 
+ deletion - to remove an item given its index or value
+
+ search - to find an element given its value
+
+
+usage of linked list
+---------------------
+
+all applications of both stacks and queues are applcation of linked lists
+
+image viewer
+
+
+
+
+
+recursion 
+---------------
+recursion is a funtion that calls itself to solve complex program and break down to smaller problems
+- every recursion need a  base case  = a condition to teminate the recursion
+
+- and a recursion case = where the fundtion is call
+
+
+
+
+linear search vs binary search
+----------------------------
+
+- binary search only works on sorted array
+
+- in linear search each element is searched in a sequential manner . 
+
+- in binear search it takes the midlle index of the array . and loop it untilt the target elemt match with middle element 
+
+
+
+
+
+
+
+
+
+DSA WEEK 2 
+
+-----------------------------------------
+
+bubble sort ( O(n) )
+___________
+
+we compare with the current value and adjacent value and check if it is sorted if not we swap them . at last we get the sorted array
+
+for ( let i = 0 ; i < arr.length -1 ; i++ ) {
+   for(let j = i+1 ; i<arr.length ; i++) {
+
+          if(arr[i]>arr[j]){
+                 let temp = arr[i]
+                 arr[i] = arr[j]
+                 arr[j] = temp
+           }
+   
+   }
+}
+
+
+
+
+
+selectionSort ( O(n) )
+---------------------
+
+selection sort is similiar to bubble sort . in selection we find the smallest elem and swap in into the firs element . untill it get sorted 
+
+funtion ( let i = 0 ;i<arr.length ;i++){
+    let min = i
+   for(let j = i+1 ; i<arr.length ; i++){
+     if(arr[min]>arr[j]){
+        min = j 
+     }
+   }
+
+ if(i==!j){
+    let temp = arr[i]
+    arr[i] = arr[min]
+    arr[min] = temp
+ }
+
+}
+
+
+
+
+
+insertion sort ( O(n) )
+--------------------
+we assume the first element of the array is sorted and compare with the all unsorted elemetns with the sorted elemts. we check if the sort elem is greter than than unsort ele . if it is we put the sort elem to the right of the sort . else   we put the unsort elem to the right of the sort and loop til it wil become sorted 
+
+for ( let i = 1 ; i < arr.length ; i++ ) {
+
+let NTI = arr[i]
+
+let j = i - 1
+
+while( j >= 0 && arr[j] > NTI ){
+
+arr [ j + 1 ] = arr[ j ]
+
+j--
+
+}
+
+arr [ j + 1 ] = NTI
+
+}
+
+
+
+
+
+quick sort ( O(logn) )
+------------------
+
+we take the last element or mid elemt or first as the pivot . then we compare elements with the pivot . if the element less than pivot we put into a left array . and if the element are greater than pivot we put into the right array . until each arr length equal to 1 which is our base case . then we concat left pivot right 
+
+
+function quickSort(arr){
+
+if(arr.length <= 1 ) {
+    return arr
+}
+
+let pivot = arr[arr.length - 1 ]
+let left = []
+let right = []
+
+for (let i = 0 ; i < arr.length-1 ; i++){
+   if(arr[i]< pivot){
+       left.push(arr[i])
+   }else{
+       right.push(arr[i])
+   }
+
+return [...quicksort(left),pivot,...quicksort(right)]
+
+}
+
+
+
+
+Mergesort  ( O(logn) )
+-------------------
+
+first step of the merge sort is we split all elments into each sub arrays . for that we take the middle element and split left array and right array untill we get the array length 1 . then we compare each sub left array and sub right array and push into one sorted array . 
+
+
+function mergeSort(arr){
+   if (arr.length <= 1){
+    return arr
+   }  
+
+   let mid  = Math.floor(arr.length/2)
+   let left  = arr.slice(0,mid)
+   let right = arr.slice(mid)
+
+return merge(mergeSort(left),mergeSort(right))
+
+} 
+
+
+
+function merge(left,right){
+
+    let sort = []
+
+    while(left.length && right.length){
+    
+      if(left[0] < right[0] ){
+      
+         sort.push(left.shift())
+       
+        }else{
+
+          sort.push(right.shift())
+
+       }
+    }
+
+return [...sort,...left,...right]
+
+}
+
+
+
+
+stack
+-------
+
+
+stack is  a linear data sturture that follows the principle of (LIFO) last in first out. stacks are used in for undo when typing , browse history , but stacks cannot be used for certain appliactions like sorting searching because random access from the middle cannot be done using stack . 
+
+stack overflow = when the stack capacity is reached and try to push elements stack will cause stack overflow
+ stack underflow  = when we try to pop from an empty stack will cause stack underflow 
+
+
+stack implementation using array 
+---------------------------------
+
+class stack {
+
+constructor(){
+    this.values = []
+    this.length = 0
+}
+
+push(element){
+
+this.value.push(element)
+this.length++
+
+}
+
+
+pop(){
+
+if(this.isEmpty()){
+  return null
+}
+
+let deletedElement = this.value.pop()
+this.length--
+return deletedElement 
+
+}
+
+peek(){
+
+return this.items[this.length-1]
+
+}
+
+print(){
+
+console.log(this.value)
+
+}
+
+getLength(){
+
+return this.length
+
+}
+
+isEmpty(){
+
+return this.length == 0 
+
+}
+
+}
+
+
+
+stack implementation using linked list 
+
+---------------------------------
+
+
+class node{
+constructor(data){
+this.node = data
+this.next = null
+}
+
+}
+
+
+
+class stacklinkedList{
+
+constructor(){
+
+this.top = null
+this.size = 0
+
+}
+
+push(data){
+
+let newNode = new node(data)
+
+if(this.isEmpty()){
+
+this.top = newnode
+
+}else {
+ 
+
+node.next = this.top
+this.top = node
+
+}
+
+
+
+pop(){
+
+this.top = this.top.next
+
+}
+
+peek(){
+
+return this.top.node
+
+}
+
+
+}
+
+
+}
+
+
+
+
+queue
+
+------------------
+
+
+queue is a linear data structure that follows the principle of (FIFO) first in first out principle . queus are used for  multi programming , network ,task sheduling etc. but however it has advantages also like the operations from middle elemnt will be time consuming and only have limited space
+
+queue overflow = it is the situation when we try to enqueue an elment when the queue reched its maximum capacity
+queue underflow = it is the situation when we try to dequeue an elemnet when the queue is empty 
+
+queue implementaion using array 
+-------------------------------
+
+class queueArray{
+
+constructor{
+  this.items = []
+  this.size = 0
+}
+
+enqueue(data){
+
+this.items.push(data)
+this.size++
+
+}
+
+dequeue(){
+
+this.items.shift()
+this.size++
+
+}
+
+isEmpty(){
+
+return this.size == 0
+
+}
+
+getSize(){
+ return this.size
+}
+
+front(){
+
+return this.items[0]
+
+}
+
+display(){
+
+console.log(this.items)
+
+}
+
+} 
+
+
+
+queuue implementation using linked list
+-------------------------------------
+
+
+class node{
+
+constructor(data){
+
+this.node = data
+this.next = null
+
+}
+
+}
+
+
+class queueLinkedList{
+
+constructore(){
+
+this.head = null
+this.tail = null
+this.size = 0
+
+}
+
+
+isEmpty(){
+
+return this.size === 0
+
+}
+
+
+
+enqueue(data){
+let newnode = new node(data)
+
+if(this.isEmpty()){
+
+this.head = newnode
+this.tail = newnode
+
+}else{
+this.tail.next = newnode
+this.tail = newnode
+
+}
+this.size++
+}
+
+dequeue(){
+
+if(this.isEmpty){
+
+return 'underflow'
+
+}
+
+this.head = this.head.next
+
+if(this.head == this.tail){
+ this.tail = null
+}
+
+this.size--
+}
+
+print(){
+let temp = this.head
+
+while(temp!==null){
+console.log(temp.node)
+temp = temp.next
+}
+}
+
+
+
+front(){
+
+return this.head.node
+
+}
+
+}
+
+
+
+hash table
+----------------------------
+
+hash table store key value pairs in a fixed array size . a string key is converted  usign a hashing function and converted into a numeric index and store using the index . insertion and searching is very fast in hash table
+
+
+hash table is used in data base indexing and cache . 
+
+collision = when we hashing the key value pairs . if two keys have same letters then it will produce same index also so it wil overide the first data stored in the index and the data will lost . this condition is called collison
+
+
+
+
+pros of using linked list in stack and queue
+-----------------------------------------------
+
+= efficient storage 
+
+= memory utilization 
+
+= efficent insertion and deletion 
+
+= no fixed size limit
+
+= ease implementation 
+
+
+type of stack 
+------------
+
+- linear stack  = data stored in a linear model like . implemented using array or linked list . 
+
+- linkedlist stack = implemented using linked list 
+
+- undo stack = have a special feature to do the undo operation 
+
+type of queue 
+--------------
+
+- linear queue = data stored in a linear model.  implementd using array or linked list 
+
+- linked list queue = implemented using linked list 
+
+- circular queue = tail is connected to the head 
+
+- proioty queue = each elment have a associative prioriy  . the high priorty is dequeued first 
+
+- double ended queue = insertion and deletein operation can be done on both sides 
+
+
+array                                                       hashtable
+----------------------------------------------------|--------------------------------------------
+
+- searching is linear time complexity                  - searching is constant time complexity 
+                                                       
+- static size                                          - dynamic size
+
+- insertion and deletion is complicated                - insertion and deltion is more easy and have a constant time complexity in average case
+
+- memory allocation is fixed                           - memory allocation is dynamic
+
+
+
+---------
+DS #3   
+---------
+
+
+
+tree
+_________
+
+A tree is a hierarchical and non linear data structure that consists a nodes connected by edges .
+
+usage of trees
+--------------
+
+- dom 
+- file folders in computer 
+- databases
+- image compressing
+
+parts of a tree
+------------
+- root
+- node 
+- edge
+- leaves
+
+
+
+
+
+binary search tree
+---------------
+
+a binary tree is the tree where each node consist has maximum two children . Each children is reffered as left child and right child . the left child value should be smaller than the parent node and the right child value is greater than the parent node .
+
+usage:-
+--------
+
+- searching 
+- sorting 
+- implementation of abstract data types like priority queue and lookups table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
